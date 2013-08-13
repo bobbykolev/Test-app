@@ -1,0 +1,71 @@
+#wrapper:after, nav:after, section:after
+{
+	content: "";
+	display: block;
+	clear:both;
+}
+body
+{
+	font-family: Verdana, Tahoma, sans-serif;
+	color: #87c41c;
+	background: url(../Images/gray_jean.png);
+	min-height: 100%;
+}
+h1, h2
+{
+	text-shadow:1px 1px 1px #ccc;
+	color: #87c41c;
+}
+#wrapper
+{
+	max-width: 960px;
+	margin: auto;
+}
+table
+{
+	border-collapse: collapse;
+}
+td, th
+{
+	border: 1px dotted #87c41c;
+	margin: 0;
+	padding: 10px;
+	text-align: left;
+}
+th
+{
+	text-align: center;
+	color: #5f8a14;
+}
+ a:link, a:visited,
+ a:active, a:hover
+{
+	color: #87c41c;
+}
+a:hover
+{
+	color: #5f8a14;
+	background: none;
+}
+#main-nav 
+{
+	display: block;
+	margin: 20px;
+}
+#main-nav ul li:first-of-type
+{
+	border-left: none;
+}
+#main-nav ul li
+{
+	float: left;
+	list-style-type: none;
+	border-left: 1px solid #87c41c;
+}
+#main-nav ul li a
+{
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 2px 10px;
+}

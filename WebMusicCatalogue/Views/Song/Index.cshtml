@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebMusicCatalogue.Models.Context.Song>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Songs</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Album.AlbumName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SongName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duration)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Album.AlbumName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SongName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duration)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SongID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SongID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SongID })
+        </td>
+    </tr>
+}
+
+</table>

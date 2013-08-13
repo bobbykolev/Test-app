@@ -1,0 +1,69 @@
+﻿@model WebMusicCatalogue.Models.Context.Album
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Album</legend>
+
+        @Html.HiddenFor(model => model.AlbumID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ArtistID, "Artist")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ArtistID", String.Empty)
+            @Html.ValidationMessageFor(model => model.ArtistID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Date)
+            @Html.ValidationMessageFor(model => model.Date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProducerID, "Producer")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ProducerID", String.Empty)
+            @Html.ValidationMessageFor(model => model.ProducerID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AlbumName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AlbumName)
+            @Html.ValidationMessageFor(model => model.AlbumName)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

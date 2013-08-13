@@ -1,0 +1,39 @@
+﻿@model WebMusicCatalogue.Models.Context.Artist
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Artist</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ArtistName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ArtistName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Country.Country1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country.Country1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ArtistDayOfBirth)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ArtistDayOfBirth)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

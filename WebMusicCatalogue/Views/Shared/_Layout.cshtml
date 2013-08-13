@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    <link href="Content/style.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="wrapper">
+    <nav id="main-nav">
+        <ul>
+            <li>
+                @Html.ActionLink("Artists", "../Artist")
+            </li>
+            <li>
+                @Html.ActionLink("Albums", "../Album")
+            </li>
+            <li>
+                @Html.ActionLink("Songs", "../Song")
+            </li>
+            <li>
+                @Html.ActionLink("Producers", "../Producer")
+            </li>
+            <li>
+                @Html.ActionLink("Countries", "../Country")
+            </li>
+            <li>
+                @Html.ActionLink("Genres", "../Genre")
+            </li>
+        </ul>
+    </nav>
+    <section>
+    @RenderBody()
+    </section>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+        </div>
+</body>
+</html>

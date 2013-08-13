@@ -1,0 +1,22 @@
+﻿@model WebMusicCatalogue.Models.Context.Producer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Producer</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProducerName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProducerName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProducerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

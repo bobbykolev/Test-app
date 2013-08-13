@@ -1,0 +1,36 @@
+﻿@model WebMusicCatalogue.Models.Context.Song
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Song</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Album.AlbumName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Album.AlbumName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SongName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SongName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Duration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Duration)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.SongID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
